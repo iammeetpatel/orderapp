@@ -351,7 +351,6 @@ type Booking {
   phone: String
   timeFrom: DateTime
   timeTo: DateTime
-  referenceToPayment: String
   payments(
     where: PaymentWhereInput! = {}
     orderBy: [PaymentOrderByInput!]! = []
@@ -374,7 +373,6 @@ input BookingWhereInput {
   phone: StringFilter
   timeFrom: DateTimeNullableFilter
   timeTo: DateTimeNullableFilter
-  referenceToPayment: StringFilter
   payments: PaymentManyRelationFilter
 }
 
@@ -390,7 +388,6 @@ input BookingOrderByInput {
   phone: OrderDirection
   timeFrom: OrderDirection
   timeTo: OrderDirection
-  referenceToPayment: OrderDirection
 }
 
 input BookingUpdateInput {
@@ -398,7 +395,6 @@ input BookingUpdateInput {
   phone: String
   timeFrom: DateTime
   timeTo: DateTime
-  referenceToPayment: String
   payments: PaymentRelateToManyForUpdateInput
 }
 
@@ -419,7 +415,6 @@ input BookingCreateInput {
   phone: String
   timeFrom: DateTime
   timeTo: DateTime
-  referenceToPayment: String
   payments: PaymentRelateToManyForCreateInput
 }
 

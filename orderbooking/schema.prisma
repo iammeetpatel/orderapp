@@ -45,13 +45,12 @@ model Blog {
 }
 
 model Booking {
-  id                 String    @id @default(cuid())
-  email              String    @default("")
-  phone              String    @default("")
-  timeFrom           DateTime?
-  timeTo             DateTime?
-  referenceToPayment String    @default("")
-  payments           Payment[] @relation("Payment_bookings")
+  id       String    @id @default(cuid())
+  email    String    @default("")
+  phone    String    @default("")
+  timeFrom DateTime?
+  timeTo   DateTime?
+  payments Payment[] @relation("Payment_bookings")
 }
 
 model Payment {
